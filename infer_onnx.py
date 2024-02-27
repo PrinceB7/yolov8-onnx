@@ -1,7 +1,7 @@
 import cv2
 import argparse
 import numpy as np
-from nets.yolo_segment import Segment
+from networks.yolo_segment import Segment
 
 class_names = ['ID']
 colors = [(0,0,255)]
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Yolov8-seg onnx inference')
     parser.add_argument('-c', '--checkpoint_path', default="weights/yolov8n-seg-v1.onnx",
                         help='Dataset version with choices')
-    parser.add_argument('-i','--image_path', default="data/5.png",
+    parser.add_argument('-i','--image_path', default="1.jpg",
                         help='List of model IDs with default values')
     args = parser.parse_args()
     
